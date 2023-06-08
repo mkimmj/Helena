@@ -1,5 +1,5 @@
 body {
-  background-color: #beef;
+  background-color: #262626;
   
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -10,7 +10,7 @@ body {
 
 
 div {
-  background-color: #feebae;
+  background-color: #8c8c8c;
   
 }
 
@@ -30,7 +30,6 @@ div {
   width: parent;
   height: 75px;
   
-  
 }
 #cardStack{
   width:400px;
@@ -40,14 +39,12 @@ div {
 #cardName{
   padding: 10px;
   width: parent;
-  width:100%;
   height:50px;
   
 }
 #playerData{
   padding: 10px;
   width: parent;
-  width:100%;
   height:50px;
   
 }
@@ -63,6 +60,8 @@ div {
   transform-origin: 50% 100%;
   transform-style: preserve-3D;
   
+  position: fixed;
+  z-index: 5;
   
   transition: opacity 0.5s linear, transform 0.5s cubic-bezier(0.7, 0.7, 0.84, .99);
 }
@@ -83,7 +82,6 @@ div {
   width: 400px;
   height: 400px;
 object-fit: cover;
-  
 }
 
 
@@ -157,7 +155,7 @@ object-fit: cover;
   
   position: absolute;
   top:0;
-  background-color: black;
+  background-color: red;
 }
 
 .statIconImageContainer{

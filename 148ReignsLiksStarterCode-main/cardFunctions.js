@@ -38,6 +38,7 @@ function shuffleDeck(array){
   function addPackToDeck(pack){
     console.log("attempt to add pack")
     for (x in cardPool.uniqueIDList){
+      console.log(cardPool.uniqueIDList,x);
       console.log(pack, cardPool.uniqueIDList[x].pack)
       if (cardPool[cardPool.uniqueIDList[x]].pack == pack) {
         shuffleIntoDeck(cardPool.uniqueIDList[x]);
@@ -63,11 +64,12 @@ function shuffleDeck(array){
     }
     else{
       card = {}
+      console.log("next card: " +card)
       values = cards[c].split("\t")
       for (i in values){ 
         card[labels[i]] = values[i];
         if (labels[i] == "image"){
-        card[labels[i]] = "./images/" + values[i];
+        card[labels[i]] = "./myImages/" + values[i];
         }
         if (labels[i] == "rightChoice" || labels[i] == "leftChoice"){
           console.log(values[i])

@@ -1,6 +1,7 @@
 let resources = [
-  {key: "meat", value: 40,image: "./images/meat.svg", },
-  {key: "veggies", value: 50, image: "./images/carrot.svg"}
+  {key: "suitor1", value: 50,image: "./myImages/goblet.jpg", },
+  {key: "suitor2", value: 50, image: "./myImages/lyre.jpg"},
+  {key: "suitor3", value: 50, image: "./myImages/olive.jpg"}
 ]
 
 function addResource(key, amount){
@@ -30,6 +31,12 @@ function updateMeters() {
   
 }
 
+function checkWin(){
+  if(hr==8 && pm==true){
+    addToTopDeck(winCard,false)
+  }
+}
+
 function checkFail() {
   failures = []
     for (x in resources) {
@@ -41,10 +48,13 @@ function checkFail() {
     let f = failures[x];
     for ( i in failCards){
       let failCard = failCards[i];
+      console.log(failCard.resource);
       if (failCard.resource === f.resource && failCard.level === f.level)
+      //console.log("fails working from here");
         addToTopDeck(failCard.card, false)
       else
         addToTopDeck(defaultFailCard, false)
+        
     }
     
   }

@@ -48,6 +48,7 @@ function resolveChoice(){
     
     updateMeters();
     
+    checkWin();
     checkFail();
     
     //activeCard.style.display = "none";
